@@ -1,0 +1,24 @@
+rules:
+  - id: code-injection.detect-eval
+    message: "Usage of 'eval(...)' detected."
+    languages: [javascript, typescript]
+    severity: WARNING
+    pattern: eval(...)
+
+  - id: code-injection.detect-new-function
+    message: "Usage of 'new Function(...)' detected."
+    languages: [javascript, typescript]
+    severity: WARNING
+    pattern: new Function(...)
+
+  - id: code-injection.detect-settimeout
+    message: "Usage of 'setTimeout(..., ...)' detected."
+    languages: [javascript, typescript]
+    severity: WARNING
+    pattern: setTimeout(..., ...)
+
+  - id: code-injection.detect-setinterval
+    message: "Usage of 'setInterval(..., ...)' detected."
+    languages: [javascript, typescript]
+    severity: WARNING
+    pattern: setInterval(..., ...)
