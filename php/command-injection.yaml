@@ -1,0 +1,30 @@
+rules:
+  - id: command-injection.detect-exec
+    message: "Usage of 'exec(...)' detected."
+    languages: [php]
+    severity: WARNING
+    pattern: exec(...)
+
+  - id: command-injection.shell-exec
+    message: "Usage of 'shell_exec(...)' detected."
+    languages: [php]
+    severity: WARNING
+    pattern: shell_exec(...)
+
+  - id: command-injection.system
+    message: "Usage of 'system(...)' detected."
+    languages: [php]
+    severity: WARNING
+    pattern: system(...)
+
+  - id: command-injection.passthru
+    message: "Usage of 'passthru(...)' detected."
+    languages: [php]
+    severity: WARNING
+    pattern: passthru(...)
+
+  - id: command-injection.popen
+    message: "Usage of 'popen(...)' detected."
+    languages: [php]
+    severity: WARNING
+    pattern: popen(...)

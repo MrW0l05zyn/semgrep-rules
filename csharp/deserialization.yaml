@@ -1,5 +1,5 @@
 rules:
-  - id: deserialization.detect-Deserialize
+  - id: deserialization.detect-deserialize
     message: "Usage of 'Deserialize(...)' detected."
     languages: [csharp]
     severity: WARNING

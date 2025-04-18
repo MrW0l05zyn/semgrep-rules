@@ -1,5 +1,5 @@
 rules:
-  - id: deserialization.detect-readObject
+  - id: deserialization.detect-readobject
     message: "Usage of 'readObject(...)' detected."
     languages: [java]
     severity: WARNING
