@@ -1,0 +1,6 @@
+rules:
+  - id: deserialization.detect-Deserialize
+    message: "Usage of 'Deserialize(...)' detected."
+    languages: [csharp]
+    severity: WARNING
+    pattern: Deserialize(...)

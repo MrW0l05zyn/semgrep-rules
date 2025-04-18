@@ -1,0 +1,6 @@
+rules:
+  - id: deserialization.detect-unserialize
+    message: "Usage of 'unserialize(...)' detected."
+    languages: [php]
+    severity: WARNING
+    pattern: unserialize(...)

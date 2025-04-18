@@ -1,0 +1,6 @@
+rules:
+  - id: deserialization.detect-Marshal-load
+    message: "Usage of 'Marshal.load(...)' detected."
+    languages: [ruby]
+    severity: WARNING
+    pattern: Marshal.load(...)

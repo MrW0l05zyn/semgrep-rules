@@ -1,0 +1,18 @@
+rules:
+  - id: deserialization.detect-pickle-loads
+    message: "Usage of 'pickle.loads(...)' detected."
+    languages: [python]
+    severity: WARNING
+    pattern: pickle.loads(...)
+
+  - id: deserialization.detect-jsonpickle-decode
+    message: "Usage of 'jsonpickle.decode(...)' detected."
+    languages: [python]
+    severity: WARNING
+    pattern: jsonpickle.decode(...)   
+
+  - id: deserialization.detect-yaml-load
+    message: "Usage of 'yaml.load(...)' detected."
+    languages: [python]
+    severity: WARNING
+    pattern: yaml.load(...)
