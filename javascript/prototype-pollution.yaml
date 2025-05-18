@@ -1,0 +1,6 @@
+rules:
+  - id: prototype-pollution.detect-merge
+    message: "Usage of '$OBJ.merge(...)' detected."
+    languages: [javascript, typescript]
+    severity: WARNING
+    pattern: $OBJ.merge(...)
