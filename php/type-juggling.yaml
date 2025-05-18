@@ -1,0 +1,14 @@
+rules:
+  - id: type-juggling.detect-loose-comparison
+    message: "Loose comparison ('==' o '!=') detected. Use '===' or '!==' to avoid type juggling vulnerabilities."
+    languages: [php]
+    severity: WARNING
+    pattern-either:
+      - pattern: $X == $Y
+      - pattern: $X != $Y
+
+  - id: type-juggling.detect-strcmp
+    message: "Usage of 'strcmp(...)' detected."
+    languages: [php]
+    severity: WARNING
+    pattern: strcmp(...)
