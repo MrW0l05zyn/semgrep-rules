@@ -2,7 +2,7 @@ rules:
   - id: code-injection.detect-eval
     message: "Usage of 'eval(...)' detected."
     languages: [javascript, typescript]
-    severity: WARNING
+    severity: ERROR
     pattern: eval(...)
 
   - id: code-injection.detect-new-function

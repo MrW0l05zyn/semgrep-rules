@@ -1,0 +1,24 @@
+rules:
+  - id: sql-injection.detect-basic-sql-commands
+    message: "Usage of basic SQL commands detected."
+    languages: [java]
+    severity: INFO
+    pattern-regex: (?i)(SELECT|UPDATE|DELETE|INSERT|CREATE|ALTER|DROP)\s+
+
+  - id: sql-injection.detect-string-concatenation
+    message: "Usage of string concatenation in SQL commands detected."
+    languages: [java]
+    severity: ERROR
+    pattern-regex: (?i)(WHERE|VALUES).*?("|')\s*\+
+  
+  - id: sql-injection.detect-insecure-sql-query-construction
+    message: "Usage of insecure SQL query construction detected."
+    languages: [java]
+    severity: WARNING
+    pattern-regex: (?i).*(sql|query|q|statement|execute|exec)\s*=\s*("|')*\b(select|insert|update|delete)\b
+
+  - id: sql-injection.detect-jdbctemplate
+    message: "Usage of 'jdbcTemplate' detected."
+    languages: [java]
+    severity: INFO
+    pattern-regex: jdbcTemplate

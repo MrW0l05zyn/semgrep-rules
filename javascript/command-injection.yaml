@@ -2,11 +2,11 @@ rules:
   - id: command-injection.detect-exec
     message: "Usage of 'exec(...)' detected."
     languages: [javascript, typescript]
-    severity: WARNING
+    severity: ERROR
     pattern: exec(...)
 
   - id: command-injection.detect-spawn
     message: "Usage of 'spawn(...)' detected."
     languages: [javascript, typescript]
-    severity: WARNING
+    severity: ERROR
     pattern: spawn(...)
