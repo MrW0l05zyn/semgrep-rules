@@ -1,6 +1,36 @@
 rules:
   - id: deserialization.detect-deserialize
-    message: "Usage of 'Deserialize(...)' detected."
+    message: "Usage of '.Deserialize(...)' detected."
     languages: [csharp]
     severity: WARNING
-    pattern: Deserialize(...)
+    pattern: $X.Deserialize(...)
+
+  - id: deserialization.detect-binaryformatter-deserialize
+    message: "Usage of 'binaryFormatter.Deserialize(...)' detected [BinaryFormatter]."
+    languages: [csharp]
+    severity: WARNING
+    pattern: binaryFormatter.Deserialize(...)
+
+  - id: deserialization.detect-jsonconvert-deserializeobject
+    message: "Usage of 'JsonConvert.DeserializeObject(...)' detected [Json.NET]."
+    languages: [csharp]
+    severity: WARNING
+    pattern: JsonConvert.DeserializeObject(...)
+
+  - id: deserialization.detect-xmlserializer-deserialize
+    message: "Usage of 'xmlSerializer.Deserialize(...)' detected [XmlSerializer]."
+    languages: [csharp]
+    severity: WARNING
+    pattern: xmlSerializer.Deserialize(...)
+
+  - id: deserialization.detect-json-toobject
+    message: "Usage of 'JSON.ToObject(...)' detected [fastJSON]."
+    languages: [csharp]
+    severity: WARNING
+    pattern: JSON.ToObject(...)
+
+  - id: deserialization.detect-readobject
+    message: "Usage of '.ReadObject(...)' detected [NetDataContractSerializer]."
+    languages: [csharp]
+    severity: WARNING
+    pattern: $X.ReadObject(...)
