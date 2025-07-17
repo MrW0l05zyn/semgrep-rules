@@ -9,7 +9,12 @@ rules:
     message: "Usage of 'binaryFormatter.Deserialize(...)' detected [BinaryFormatter]."
     languages: [csharp]
     severity: WARNING
-    pattern: binaryFormatter.Deserialize(...)
+    patterns:
+      - pattern-inside: |
+          ...
+          BinaryFormatter $X = new BinaryFormatter();
+          ...
+      - pattern: $X.Deserialize(...);     
 
   - id: deserialization.detect-jsonconvert-deserializeobject
     message: "Usage of 'JsonConvert.DeserializeObject(...)' detected [Json.NET]."
