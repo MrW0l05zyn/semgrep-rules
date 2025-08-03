@@ -2,11 +2,20 @@ rules:
   - id: command-injection.detect-exec
     message: "Usage of 'exec(...)' detected."
     languages: [javascript, typescript]
-    severity: ERROR
+    severity: WARNING
     pattern: exec(...)
 
   - id: command-injection.detect-spawn
     message: "Usage of 'spawn(...)' detected."
     languages: [javascript, typescript]
-    severity: ERROR
+    severity: WARNING
     pattern: spawn(...)
+
+  - id: command-injection.detect-child-process
+    message: "Usage of 'child_process' detected."
+    languages: [javascript, typescript]
+    severity: ERROR
+    pattern-either:
+      - pattern: child_process
+      - pattern: child_process.exec(...)
+      - pattern: child_process.spawn(...)

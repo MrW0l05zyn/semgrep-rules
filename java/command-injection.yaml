@@ -1,0 +1,6 @@
+rules:
+  - id: command-injection.detect-runtime-getruntime-exec
+    message: "Usage of 'Runtime.getRuntime().exec(...)' detected."
+    languages: [java]
+    severity: ERROR
+    pattern: Runtime.getRuntime().exec(...)

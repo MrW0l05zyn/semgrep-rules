@@ -28,3 +28,9 @@ rules:
     languages: [php]
     severity: ERROR
     pattern: popen(...)
+
+  - id: command-injection.proc-open
+    message: "Usage of 'proc_open(...)' detected."
+    languages: [php]
+    severity: ERROR
+    pattern: proc_open(...)    

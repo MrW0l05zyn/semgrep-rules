@@ -1,0 +1,6 @@
+rules:
+  - id: code-injection.detect-eval
+    message: "Usage of 'eval(...)' detected."
+    languages: [php]
+    severity: ERROR
+    pattern: eval(...)

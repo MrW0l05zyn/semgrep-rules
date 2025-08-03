@@ -1,0 +1,24 @@
+rules:
+  - id: command-injection.detect-os-system
+    message: "Usage of 'os.system(...)' detected."
+    languages: [python]
+    severity: ERROR
+    pattern: os.system(...)
+
+  - id: command-injection.detect-os-popen
+    message: "Usage of 'os.popen(...)' detected."
+    languages: [python]
+    severity: ERROR
+    pattern: os.popen(...)
+
+  - id: command-injection.detect-subprocess-run
+    message: "Usage of 'subprocess.run(...)' detected."
+    languages: [python]
+    severity: ERROR
+    pattern: subprocess.run(...)
+
+  - id: command-injection.detect-subprocess-Popen
+    message: "Usage of 'subprocess.Popen(...)' detected."
+    languages: [python]
+    severity: ERROR
+    pattern: subprocess.Popen(...)

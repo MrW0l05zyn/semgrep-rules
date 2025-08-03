@@ -1,0 +1,8 @@
+rules:
+  - id: command-injection.detect-process-start
+    message: "Usage of 'Process.Start(...)' detected."
+    languages: [csharp]
+    severity: ERROR
+    pattern-either:
+      - pattern: Process.Start(...)
+      - pattern: System.Diagnostics.Process.Start(...)

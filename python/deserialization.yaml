@@ -9,7 +9,7 @@ rules:
     message: "Usage of 'jsonpickle.decode(...)' detected."
     languages: [python]
     severity: WARNING
-    pattern: jsonpickle.decode(...)   
+    pattern: jsonpickle.decode(...)
 
   - id: deserialization.detect-yaml-load
     message: "Usage of 'yaml.load(...)' detected."

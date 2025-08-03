@@ -1,0 +1,12 @@
+rules:
+  - id: code-injection.detect-eval
+    message: "Usage of 'eval(...)' detected."
+    languages: [python]
+    severity: ERROR
+    pattern: eval(...)
+
+  - id: code-injection.detect-exec
+    message: "Usage of 'exec(...)' detected."
+    languages: [python]
+    severity: ERROR
+    pattern: exec(...)
