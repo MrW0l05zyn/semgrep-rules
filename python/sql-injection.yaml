@@ -3,5 +3,4 @@ rules:
     message: "Usage of insecure SQL query interpolation detected."
     languages: [python]
     severity: ERROR
-    patterns:
-      - pattern: $CURSOR.execute($QUERY % ...)
+    pattern: $CURSOR.execute($QUERY % ...)
